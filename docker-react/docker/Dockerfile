@@ -3,11 +3,7 @@ LABEL maintainer="wenzexu"
 WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 COPY package.json package-lock.json ./
-RUN npm config set cache /app/.npm-cache --global && \
-    npm install --silent && \
-    adduser \
-        -D \
-        -H \
-        wenzexu && \
+RUN npm install --silent && \
+    adduser -D wenzexu && \
     chown -R wenzexu:wenzexu /app
 USER wenzexu
