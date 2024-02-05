@@ -1,9 +1,10 @@
 version: '3.8'
 services:
-  app:
+  docker-react-app:
     build:
       context: ../
       dockerfile: docker/Dockerfile
+    image: docker-react
     volumes:
       - ..:/app
       - /app/node_modules

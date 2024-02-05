@@ -1,9 +1,10 @@
 version: '3.8'
 services:
-  app:
+  docker-vue-app:
     build:
       context: ../
       dockerfile: docker/Dockerfile
+    image: docker-vue
     volumes:
       - ..:/app
       - /app/node_modules
