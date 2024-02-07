@@ -1,0 +1,14 @@
+{
+	"name": "DEV Container",
+	"build": { "dockerfile": "../.docker/Dockerfile"},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"MichaelCurrin.auto-commit-msg",
+				"donjayamanne.python-extension-pack"
+			]
+		}
+	},
+	"postCreateCommand": "git config --global --add safe.directory /workspaces/leetcode",
+	"containerUser": "wenzexu"
+}
